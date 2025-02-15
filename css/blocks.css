@@ -1,0 +1,18 @@
+.counter__body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.counter__minus, .counter__plus {
+  border: 1px solid #000;
+  padding: 0.5rem 1rem;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+.counter__number {
+  border: 1px solid #000;
+  padding: 0.5rem 1rem;
+  background-color: #fff;
+  text-align: center;
+}/*# sourceMappingURL=blocks.css.map */

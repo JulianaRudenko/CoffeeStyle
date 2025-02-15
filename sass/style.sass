@@ -1,0 +1,755 @@
+@import "normalizes.scss"
+@import "resets.scss"
+
+*
+    box-sizing: border-box
+
+@font-face 
+    font-family: "Karla"
+    src: url('../fonts/Karla-Bold.ttf')
+    font-weight: bold
+    font-style: normal
+
+@font-face 
+    font-family: "Karla"
+    src: url('../fonts/Karla-Regular.ttf')
+    font-weight: regular
+    font-style: normal
+
+html
+    font-family: "Karla"
+    font-size: 62.5%
+        
+
+$color-grey: #1D1F2E 
+$color-braun: #A25F4B   
+
+.main-section
+    padding-top: 2.8rem
+    &__container-nav
+        max-width: 94rem
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+        @media (max-width: 428.98px)
+            display: flex
+            justify-content: center
+    &__nav
+        margin-right: 5rem
+        padding-top: 1rem
+        @media (max-width: 428.98px)
+            margin-right: 0
+    &__list
+        display: flex
+        justify-content: space-between
+        gap: 1.5rem
+        flex-wrap: wrap
+        li
+            a
+                color: $color-grey
+                text-decoration: none
+                font-size: 1.2rem
+                letter-spacing: .2rem
+                text-transform: uppercase
+                font-weight: 400
+                &:hover
+                    color: $color-braun
+                
+
+        
+.logo
+    padding: 0px 9.7rem 3rem 2rem
+    @media (max-width: 856px)
+        padding: 0px .3rem 2rem .2rem
+    @media (max-width: 428.98px)
+        padding: 0px .3rem .2rem .2rem
+.container
+    max-width: 98rem
+    padding: 0px 1.5rem
+    margin: 0 auto
+
+.cart
+    display: flex
+    flex-direction: row
+    gap: 1rem
+    padding-top: .5rem
+    &__icon
+        width: 1.6rem
+        height: 2rem
+    &__text
+        text-transform: uppercase
+        letter-spacing: .2rem
+        font-size: 1.2rem
+        font-weight: 400
+        padding-top: .5rem
+        a
+            color: $color-grey
+            text-decoration: none
+            &:hover
+                color: $color-braun
+    &__count
+        border-radius: 50%
+        width: 2rem
+        height: 1.8rem
+        background-color: black
+        display: flex
+        justify-content: center
+        align-items: center
+        font-size: 1.1rem
+        color: white
+
+.first-display 
+    .wraper
+        display: flex
+        justify-content: center
+        align-items: center
+        background-color: #050827
+        position: relative
+        &__background
+            
+            width: 94vw
+            max-width: 94rem
+        img
+            width: 100%
+            height: auto
+            display: block
+            
+            
+            
+    &__content
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        text-align: center
+        @media(max-width: 768px)
+            top: 47%
+        @media(max-width: 428.98px)
+            top: 45%
+        @media(max-width: 320px)
+            top: 48%
+    &__sub-title
+        color: white
+        font-size: 1.2rem
+        text-transform: uppercase
+        letter-spacing: .2rem
+        margin-bottom: 1rem
+        @media (max-width: 428.98px)
+            font-size: 1rem
+        @media (max-width: 320px)
+            font-size: 0.8rem
+            letter-spacing: .1rem
+            padding-top: 1rem
+    &__title
+        color: white
+        font-size: clamp(2.4rem, 1.355rem + 5.23vw, 4.7rem)
+        margin-bottom: 1rem
+        @media (max-width: 991.9px)
+            font-size: 4rem
+        @media (max-width: 767.9px)
+            font-size: 3.2rem
+        @media (max-width: 428.98px)
+            font-size: 2.6rem
+        @media (max-width: 320px)
+            font-size: 2rem
+    &__text
+        color: white
+        font-weight: 400
+        font-size: clamp(1rem, calc(0.7rem + 1.1vw),1.7rem)
+        margin-bottom: 3.8rem
+        text-align: center
+        padding: 0 2rem
+        @media(max-width: 493px)
+            margin-bottom: 2.8rem
+        @media(max-width: 428.98px)
+            margin-bottom: 2.2rem
+        @media(max-width: 320px)
+            margin-bottom: 1.8rem
+    &__btn
+        background-color: white
+        
+.button
+    display: inline-block
+    padding: .9rem 2.4rem 
+    text-align: center
+    background-color: white
+    box-shadow: 0 2px 6px 0 rgba(29, 31, 46, 0.1)
+    font-size: 1.2rem
+    letter-spacing: .2rem
+    text-transform: uppercase
+    font-weight: bold
+    transition: all 0.3s ease
+    cursor: pointer
+    &:hover
+        transform: translateY(-3px)
+    @media (max-width: 493px)
+        padding: .9rem 1.6rem
+        font-size: 1rem
+    @media (max-width: 428.98px)
+        font-size: 0.8rem
+        letter-spacing: .1rem
+        padding: .7rem 1.4rem
+
+.text-section
+    padding-top: 12rem
+    display: flex
+    flex-direction: column
+    align-items: center
+    @media (max-width: 991.98px)
+        padding-top: 9rem
+    @media (max-width: 767.98px)
+        padding-top: 4rem
+    @media (max-width: 428.98px)
+        padding-top: 3rem
+    @media (max-width: 320px)
+        padding-top: 2rem
+    &__header
+        text-align: center
+        line-height: 1.42 // 40/28
+        font-size: clamp(1.8rem, 1.5rem + 1vw, 2.8rem)
+        font-weight: 400
+        @media(max-width: 428.98px)
+            font-size: 1.6rem
+
+    &__text
+        text-align: center
+        padding-top: 1.6rem
+        line-height: 1.75 // 28/16
+        font-size: clamp(1rem, 0.766rem + 1.17vw, 1.6rem)
+        font-weight: 400
+        opacity: 0.7
+        @media(max-width: 428.98px)
+            font-size: 1rem
+    &__link
+        position: relative
+        padding-top: 2rem
+        text-decoration: none
+        color: $color-braun
+        font-size: clamp(1rem, 0.857rem + 0.71vw, 1.5rem)
+        line-height: 1.86 // 28/15
+        font-weight: 400
+        @media(max-width: 428.98px)
+            padding-top: 1rem
+            font-size: 1rem
+    &__link::after
+        content: ""
+        position: absolute
+        left: 0
+        bottom: 0
+        width: 100%
+        height: .2rem
+        background-color: $color-braun
+        opacity: 0.2
+.cart-cups
+    min-height: 85.7rem
+    &__column
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        gap: 2rem
+        @media( max-width:970px)
+            flex-direction: column
+            justify-content: center
+            align-items: center
+    &__body
+        display: flex
+        flex-direction: column
+        align-items: center
+        flex: 0 1 auto
+    &__image
+     width: 100%   
+.header-title
+    display: flex
+    align-items: center
+    justify-content: center
+    position: relative
+    color: $color-grey
+    font-size: 1.2rem
+    font-weight: 400
+    line-height: 1.5 // 18/12
+    letter-spacing: .2rem
+    text-transform: uppercase
+    @media (max-width: 493px)
+        text-align: center
+        
+.header-title::before
+    content: ""
+    width: 3rem
+    height: .05rem
+    background-color: #2F303E
+    margin: 0 1.5rem
+    @media (max-width: 428.98px)
+        width: 1.6rem
+    @media (max-width: 320px)
+        font-size: 1.2rem
+.header-title::after
+    content: ""
+    width: 3rem
+    height: .05rem
+    background-color: #2F303E
+    margin: 0 1.5rem
+    @media (max-width: 428.98px)
+        width: 1.6rem
+    @media (max-width: 320px)
+        font-size: 1.2rem
+.header-title--padding
+    padding: 10rem 0 10rem 0
+    @media (max-width: 991.98px)
+        padding: 7rem 0 7rem 0
+    @media (max-width: 767.98px)
+        padding: 5rem 0 5rem 0
+    @media (max-width: 428.98px)
+        padding: 3rem 0 3rem 0
+    @media (max-width: 320px)
+        padding: 2rem 0 2rem 0
+
+.title-product
+    padding-top: 3.5rem
+    @media (max-width: 428.98px)
+        padding-top: .5rem
+    color: $color-grey
+    font-size: 2rem
+    font-weight: 400
+    line-height: 1.5 // 30/20
+    @media (max-width: 428.98px)
+        padding-top: .5rem
+        font-size: 1.6rem
+    @media (max-width: 320px)
+        font-size: 1.2rem
+.preis-product
+    padding-top: .5rem
+    color: $color-grey
+    opacity: 0.7
+    font-size: 1.6rem
+    font-weight: 400
+    line-height: 1.75 // 28/16
+    @media (max-width: 428.98px)
+        font-size: 1.4rem
+    @media (max-width: 320px)
+        font-size: 1.2rem
+.color-red
+    color: $color-braun
+    font-size: 1.9rem
+    font-weight: 400
+    line-height: 1.68 // 32/19
+    margin-right: 1rem
+    @media (max-width: 428.98px)
+        font-size: 1.7rem
+    @media (max-width: 320px)
+        font-size: 1.4rem
+.strikethrough
+    color: $color-grey
+    opacity: 0.4
+    font-size: 1.6rem
+    line-height: 1.75// 28/16
+    text-decoration: line-through
+    @media (max-width: 428.98px)
+        font-size: 1.4rem
+    @media (max-width: 320px)
+        font-size: 1.2rem
+.more-products
+    min-height: 163.3rem
+    &__row
+        display: flex
+        flex-wrap: wrap
+        gap: 1.8rem
+        @media (max-width: 968px)
+            justify-content: center
+    &__body
+        flex: 0 1 32%
+
+
+.offer
+    &__flex-container
+        display: flex
+        flex-wrap: wrap
+        gap: 8rem
+        @media (max-width: 862px)
+            justify-content: center
+            gap: 4rem
+    &__container
+    &__content
+        max-width: 46rem
+        @media (max-width: 862px)
+            text-align: center
+            min-width: 46rem
+        @media (max-width: 428.98px)
+            min-width: 0
+    &__title
+        color: $color-grey
+        font-size: 1.2rem
+        font-weight: 400
+        line-height: 1.5 // 18/12
+        text-transform: uppercase
+        letter-spacing: .2rem
+        margin-bottom: 1.4rem
+        @media(max-width: 428.98px)
+            font-size: 1rem
+            margin-bottom: 1rem
+        @media(max-width: 320px)
+            font-size: 0.8rem
+            margin-bottom: .8rem
+        
+    &__text
+        color: $color-grey
+        font-size: 3.6rem
+        font-weight: 400
+        line-height: 1.38 // 50/36
+        margin-bottom: 1.5rem
+        @media(max-width: 428.98px)
+            font-size: 2.2rem
+            margin-bottom: 1rem
+        @media(max-width: 320px)
+            font-size: 1.6rem
+            margin-bottom: .8rem
+    &__desc
+        color: $color-grey
+        font-size: 1.6rem
+        line-height: 1.75 // 28/16
+        opacity: 0.7
+        margin-bottom: 3rem
+        @media(max-width: 767.98px)
+            margin-bottom: 1.3rem
+        @media(max-width: 428.98px)
+            font-size: 1.4rem
+            margin-bottom: 1rem
+        @media(max-width: 320px)
+            font-size: 1.2rem
+            margin-bottom: .8rem
+    &__background-img
+        width: 100%
+        padding-top: 3rem
+    &__img
+        width: 100%
+.grid
+    display: grid
+    gap: 1.8rem
+    &__item1
+        grid-row: span 2
+        @media (max-width: 498px)
+            grid-column: span 2
+    &__item2
+        grid-column: 2 / 3
+        grid-row: 2 / 3
+        @media (max-width: 498px)
+            grid-column: 1 / 2
+            grid-row: 2 / 3
+    &__item3
+        grid-column: 2 / 3
+        grid-row: 1 / 2
+        @media (max-width: 498px)
+            grid-column: 2 / 3
+            grid-row: 2 / 3
+    img
+        @media (max-width: 498px)
+            width: 100%
+            height: 100%
+            object-fit: cover
+.btn-small
+    text-decoration: none
+    color: white
+    background: #1d1f2e
+    padding: .9rem 2.4rem
+    font-size: 1.2rem
+    line-height: 1.8rem
+    letter-spacing: 0.2rem
+    @media (max-width: 862px)
+        margin: 0 auto
+    @media(max-width: 428.98px)
+        font-size: 1rem
+        padding: .8rem 1.6rem
+    @media(max-width: 320px)
+        font-size: .8rem
+        padding: .6rem 1.4rem
+.stories
+    margin-bottom: 14rem
+    @media (max-width: 991.9px)
+        margin-bottom: 10rem
+    @media(max-width: 767.9px)
+        margin-bottom: 7rem
+    @media(max-width: 428.98px)
+        margin-bottom: 5rem
+    @media(max-width: 320px)
+        margin-bottom: 3rem
+    &__galery
+        display: flex
+        gap: 2rem
+        flex-wrap: wrap
+        
+        @media (max-width: 767.98px)
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+        @media (max-width: 970px)
+            justify-content: center
+    &__column1
+        display: flex
+        flex-direction: column
+        width: 30rem
+    &__img
+        margin-bottom: 2.6rem
+        max-width: 30rem
+        max-height: 30rem
+        @media(max-width: 767.9px)
+            margin-bottom: 2rem
+        @media(max-width: 428.98px)
+            margin-bottom: 1rem
+        @media(max-width: 320px)
+            margin-bottom: 0
+    &__title
+        margin-bottom: 1.4rem
+        line-height: 1.6 // 32/20
+        font-size: 2rem
+        font-weight: 400
+        word-wrap: break-word
+        @media(max-width: 767.9px)
+            font-size: 1.8rem
+            margin-bottom: 1rem
+        @media(max-width: 428.98px)
+            font-size: 1.6rem
+        @media(max-width: 320px)
+            font-size: 1.4rem
+    &__text
+        margin-bottom: 1.6rem
+        line-height: 1.75 // 28/16
+        font-size: 1.6rem
+        color: $color-grey
+        opacity: 0.7
+        font-weight: 400
+        word-wrap: break-word
+        @media(max-width: 767.9px)
+            font-size: 1.4rem
+            margin-bottom: 1.2rem
+        @media(max-width: 428.98px)
+            font-size: 1.2rem
+        @media(max-width: 320px)
+            margin-bottom: 1rem
+    &__datum
+        letter-spacing: .2rem
+        text-transform: uppercase
+        line-height: 1.5 // 18/12
+        font-size: 1.2rem
+        font-weight: 400
+        color: $color-grey
+        @media(max-width: 428.98px)
+            font-size: 1rem
+.subscribe
+    padding: 8rem 0 8.8rem 0
+    background-color: $color-grey
+    @media (max-width: 767.98px)
+        padding: 5rem 0 5.5rem 0
+    @media (max-width: 428.98px)
+        padding: 3rem 0 3.5rem 0
+    @media (max-width: 320px)
+        padding: 1.5rem 0 2rem 0
+    &__header
+        color: white
+        @media (max-width: 428.98px)
+            margin-bottom: 1rem
+        @media (max-width: 320px)
+            text-align: center
+            font-size: 1rem
+            margin-bottom: 0.8rem
+        
+        &::before::after
+            content: ""
+            width: 3rem
+            height: .05rem
+            background-color: #2F303E
+            margin: 0 1.5rem
+            opacity: 0.1
+    &__sub-title
+        color: #FFFFFF
+        font-size: 3.6rem
+        line-height: 1.38 // 50/36
+        text-align: center
+        margin-bottom: 2.5rem
+        @media (max-width: 767.98px)
+            font-size: 2.2rem
+            margin-bottom: 1.5rem
+        @media (max-width: 428.98px)
+            font-size: 1.8rem
+            margin-bottom: 1rem
+    &__form
+        display: flex
+        justify-content: center
+        gap: 1rem
+        flex-wrap: wrap
+    &__input
+        background: $color-grey
+        border: 1px solid #2F303E 
+        padding: 1.8rem 12.9rem 1.8rem 1.8rem
+        flex: 0 1 35rem
+        &::placeholder
+            font-size: 1.2rem
+            line-height: 1.5 // 18/12
+            letter-spacing: .17rem
+            text-transform: uppercase
+            font-weight: 400
+            opacity: 0.2       
+        @media (max-width: 428.98px)
+            padding: 1.2rem
+    &__btn
+        background: white
+        display: flex
+        justify-content: center
+        align-items: center
+        text-align: center
+        border: none
+        padding: 1.8rem 2.4rem
+        cursor: pointer
+        @media (max-width: 519px)
+            flex: 0 1 35rem
+        @media (max-width: 428.98px)
+            padding: 1rem
+    &__span
+        font-size: 1.2rem
+        text-transform: uppercase
+        line-height: 1.5 // 18/12
+        letter-spacing: .2rem
+        font-weight: 40rem
+input::placeholder
+    width: 100%
+    font-size: 1.2rem
+    line-height: 0.83 // 10/12
+    color: white
+.footer
+    &__wraper
+        padding: 11rem 0 4.8rem 0
+        @media (max-width: 991.98px)
+            padding: 9rem 0 4rem 0
+        @media (max-width: 767.98px)
+            padding: 4rem 0 2rem 0
+        @media (max-width: 428.98px)
+            padding: 1.2rem 0 1.2rem 0
+    &__row
+        display: flex
+        justify-content: space-between
+        gap: 2rem
+        @media (max-width: 767.98px)
+            justify-content: center
+        @media (max-width: 320px)
+            justify-content: space-around    
+        
+    &__column
+        display: flex
+        flex-direction: column
+        
+    &__title
+        font-size: 1.2rem
+        letter-spacing: .2rem
+        text-transform: uppercase
+        line-height: 1.5 // 18/12
+        margin-bottom: 2.2rem
+        @media(max-width: 428.98px)
+            font-size: 1rem
+            margin-bottom: 1.2rem
+    &__logo
+        margin-bottom: 2.3rem
+    &__text
+        font-size: 1.4rem
+        line-height: 1.57 // 22/14
+        font-weight: 400
+        color: $color-grey
+        opacity: 0.7
+        margin-bottom: 8.2rem
+    &__copy
+        font-size: 1.2rem
+        line-height: 1.66 // 20/12
+        font-weight: 400
+        color: $color-grey
+        opacity: 0.3
+        text-align: center
+    &__nav-item
+        font-size: 1.3rem
+        line-height: 1.69 // 22/13
+        font-weight: 400
+        color: $color-grey
+        opacity: 0.7
+        margin-bottom: 1rem
+        @media(max-width: 428.98px)
+            font-size: 1.1rem
+            margin-bottom: .5rem
+        &:last-child
+            margin-bottom: 0px
+    &__text-help
+        font-size: 1.4rem
+        line-height: 1.57 // 22/14
+        font-weight: 400
+        color: $color-grey
+        opacity: 0.7
+        margin-bottom: 1.5rem
+        @media(max-width: 428.98px)
+            font-size: 1.1rem
+            margin-bottom: .5rem
+    &__email
+        font-size: 2.3rem
+        line-height: 1.56 // 36/23
+        font-weight: 400
+        color: $color-grey
+        margin-bottom: 5.5rem
+        @media (max-width: 592px)
+            font-size: 1.6rem
+        @media (max-width: 428.98px)
+            font-size: 1.4rem
+            margin-bottom: 3.5rem
+        @media (max-width: 320px)
+            font-size: 1rem
+    &__powered
+        font-size: 1.2rem
+        line-height: 1.66// 20/12
+        font-weight: 400
+        color: $color-grey
+        opacity: 0.3
+        text-align: center
+.column-1
+    width: 27.45%
+    margin-right: 5.5rem
+    @media (max-width: 991.98px)
+        margin-right: 2.5rem
+    @media (max-width: 767.98px)
+        display: none
+.column-2 
+    margin-right: 2rem
+    @media (max-width: 320px)
+        width: 25%
+        
+.column-3
+    
+    margin-right: 2rem
+    @media (max-width: 320px)
+        width: 25%       
+.column-4
+    width: 31.17%
+        
+    
+
+
+        
+        
+
+
+        
+
+
+
+
+
+
+        
+        
+        
+        
+
+        
+
+
+
+    
+        
+        
+
+        
+        
+          
